@@ -1,5 +1,15 @@
 package centromedico.com.domain;
+import java.io.Serializable;
+import javax.persistence.*;
+import java.time.LocalDate;
 
-public class Historia {
-    
+import lombok.Data;
+@Data
+@Entity
+@Table(name ="historia")
+public class Historia implements Serializable{
+    @Id
+    int idHistoria;
+    LocalDate fechaHistoria;
+    String observacion;
 }
