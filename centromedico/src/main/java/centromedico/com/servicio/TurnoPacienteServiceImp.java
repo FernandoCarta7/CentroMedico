@@ -2,31 +2,32 @@ package centromedico.com.servicio;
 
 import java.util.List;
 
-import centromedico.com.domain.Turno;
+import centromedico.com.domain.TurnoPaciente;
 
-public class TurnoServiceImp implements TurnoService{
+public class TurnoPacienteServiceImp implements TurnoPacienteService{
 
     @Override
-    public List<Turno> listar() {
+    public List<TurnoPaciente> listar() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'listar'");
     }
 
     @Override
-    public void guardar(Turno turno) {
+    public void guardar(TurnoPaciente tPaciente) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'guardar'");
     }
 
     @Override
-    public void eliminar(Turno turno) {
+    public void eliminar(TurnoPaciente tPaciente) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
     }
 
     @Override
-    public Turno encontrarConcepto(Turno turno) {
+    public TurnoPaciente encontrarConcepto(TurnoPaciente tPaciente) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'encontrarConcepto'");
     }
+    
 }

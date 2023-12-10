@@ -4,7 +4,7 @@ import java.util.List;
 
 import centromedico.com.domain.MedicoEspecialidad;
 
-public class MedicoServiceImp implements MedicoEspecialidadService {
+public class MedicoEspecialidadServiceImp implements MedicoEspecialidadService{
 
     @Override
     public List<MedicoEspecialidad> listarMedicoEspecialidad() {

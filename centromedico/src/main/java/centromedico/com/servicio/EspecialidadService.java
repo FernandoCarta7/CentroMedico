@@ -1,4 +1,15 @@
 package centromedico.com.servicio;
-public class EspecialidadService {
-    
+
+import java.util.List;
+
+import centromedico.com.domain.Especialidad;
+
+public interface EspecialidadService {
+    public List<Especialidad> listar();
+
+    public void guardar(Especialidad especialidad);
+
+    public void eliminar(Especialidad especialidad);
+
+    public Especialidad encontrarConcepto(Especialidad especialidad);
 }

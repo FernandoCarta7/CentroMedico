@@ -4,7 +4,7 @@ import java.util.List;
 
 import centromedico.com.domain.HistoriaPaciente;
 
-public class HistoriaServiceImp implements HistoriaPacienteService{
+public class HistoriaPacienteServiceImp  implements HistoriaPacienteService{
 
     @Override
     public List<HistoriaPaciente> listarHistoriaPaciente() {
@@ -29,5 +29,5 @@ public class HistoriaServiceImp implements HistoriaPacienteService{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'encontrarHistoriaPaciente'");
     }
-    
+
 }
