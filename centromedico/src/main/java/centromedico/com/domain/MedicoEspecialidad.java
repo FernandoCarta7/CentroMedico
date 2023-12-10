@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "medicoespecialidad")
-public class MedicoEspecialidad {
+public class MedicoEspecialidad implements Serializable {
     int idMedico;
     int idEspecialidad;
     int descripcion;
