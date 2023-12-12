@@ -1,15 +1,72 @@
 package centromedico.com.servicio;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import centromedico.com.conexionPostgreSQL.ConexionPostgreSQL;
 import centromedico.com.domain.Paciente;
+import centromedico.com.domain.Pais;
 
 public class PacienteServiceImp implements PacienteService {
 
     @Override
     public List<Paciente> listar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listar'");
+        ConexionPostgreSQL connSql = new ConexionPostgreSQL();
+        Connection connection = connSql.getConexion();
+        Paciente paciente;
+        List<Paciente> pacientes = new ArrayList<>();
+        try {
+
+            String sql = "SELECT * FROM public.paciente";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+
+                int idpaciente = resultSet.getInt("idpaciente");
+                String dni = resultSet.getString("dni");
+                String primernombre = resultSet.getString("primernombre");
+                String primerapellido = resultSet.getString("primerapellido");
+                String segundoNombre = resultSet.getString("segundonombre");
+                String segundoApellido = resultSet.getString("segundoapellido");
+                String genero = resultSet.getString("genero");
+                Date fNacimiento = resultSet.getDate("fnacimiento");
+                String domicilio = resultSet.getString("domicilio");
+                String pais = resultSet.getString("idpais");
+                String telefono = resultSet.getString("telefono");
+                String email = resultSet.getString("email");
+                String observacion = resultSet.getString("observacion");
+
+                paciente = new Paciente(
+                        idpaciente,
+                        dni,
+                        primernombre,
+                        primerapellido,
+                        segundoNombre,
+                        segundoApellido,
+                        genero,
+                        fNacimiento,
+                        domicilio,
+                        pais,
+                        telefono,
+                        email,
+                        observacion);
+
+                pacientes.add(paciente);
+            }
+
+            connSql.closeConexion();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return pacientes;
     }
 
     @Override
@@ -29,5 +86,5 @@ public class PacienteServiceImp implements PacienteService {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'encontrarConcepto'");
     }
-    
+
 }

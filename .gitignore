@@ -1,0 +1,3 @@
+centromedico/src/main/resources/propiedades/application.properties
+centromedico/src/main/java/centromedico/com/conexionPostgreSQL/ConexionPostgreSQL.java
+
