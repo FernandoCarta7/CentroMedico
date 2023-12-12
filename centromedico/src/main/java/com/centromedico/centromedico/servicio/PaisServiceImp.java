@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.centromedico.centromedico.domain.Pais;
+
+import centromedico.com.domain.Paciente;
+
 import java.sql.*;
 import java.util.*;
 
@@ -23,6 +26,7 @@ public class PaisServiceImp implements PaisService{
         ConexionPostgreSQL connSql = new ConexionPostgreSQL();
         Connection connection = connSql.getConexion();
         List<Pais> paises = new ArrayList<>();
+        
         try {
             
             String sql = "SELECT * FROM public.pais";

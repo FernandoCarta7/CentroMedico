@@ -18,7 +18,7 @@ public class PacienteServiceImp implements PacienteService {
         List<Paciente> pacientes = new ArrayList<>();
         try {
 
-            String sql = "SELECT * FROM public.paciente";
+            String sql = "SELECT * FROM public.paciente ORDER BY DNI";
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet resultSet = statement.executeQuery();
 
