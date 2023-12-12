@@ -1,6 +1,6 @@
 package com.centromedico.centromedico.domain;
 
-import java.time.LocalDate;
+
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.*;

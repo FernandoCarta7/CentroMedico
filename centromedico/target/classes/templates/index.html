@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Medico</title>
+
+</head>
+
+<body>
+
+    <header th:replace="layout/plantilla :: header"></header>
+
+    <div class="container-fluid" th:if="${pacientes != null and !pacientes.empty}">
+        
+            <table class="table table-dark table-hover">
+                
+                    <caption>
+                        Pacientes
+                    </caption>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Primer nombre</th>
+                        <th>Primer apellido</th>
+                        <th>Genero</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                
+                
+                    <tr tr:each="paciente : ${pacientes}">
+                        
+                        <td th:text="${paciente.DNI}"></td>
+                        <td th:text="${paciente.primerNombre}"></td>
+                        <td th:text="${paciente.primerApellido}"></td>
+                        <td th:text="${paciente.genero}"></td>
+                        <td></td>
+                    </tr>
+                    
+                
+                
+            </table>
+        
+
+
+    </div>
+
+
+
+
+    <footer th:replace="layout/plantilla :: footer"></footer>
+    <script src="js/materialize.js"></script>
+</body>
+
+</html>
