@@ -66,19 +66,19 @@ public class PacienteServiceImp implements PacienteService {
 
     @Override
     public void guardar(Paciente paciente) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'guardar'");
     }
 
     @Override
     public void eliminar(Paciente paciente) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
     }
 
     @Override
     public Paciente encontrarConcepto(Paciente paciente) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'encontrarConcepto'");
     }
     

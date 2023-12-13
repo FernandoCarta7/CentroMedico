@@ -11,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.centromedico.centromedico.domain.Pais;
 
-import centromedico.com.domain.Paciente;
 
 import java.sql.*;
 import java.util.*;
@@ -39,7 +38,7 @@ public class PaisServiceImp implements PaisService{
 
             connSql.closeConexion();
         } catch (Exception e) {
-            // TODO: handle exception
+            e.printStackTrace();
         }
 
         return paises;
@@ -47,19 +46,19 @@ public class PaisServiceImp implements PaisService{
 
     @Override
     public void guardar(Pais pais) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'guardar'");
     }
 
     @Override
     public void eliminar(Pais pais) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
     }
 
     @Override
     public Pais encontrarConcepto(Pais pais) {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'encontrarConcepto'");
     }
     
