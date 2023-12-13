@@ -15,13 +15,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 @Slf4j
 public class ControladorInicio {
 
-    private PacienteServiceImp pacienteServiceImp;
 
     @GetMapping("/")
     public String inicio(Usuario usuario, Model model) {
         
         log.info("Ejecutando controlador inicio");
-        model.addAttribute("usuario", usuario);
+        
         return "index";
     }
 
@@ -29,11 +28,28 @@ public class ControladorInicio {
     public String iniciarSesion(@ModelAttribute Usuario usuario){
         
         UsuarioServiceImp uImp = new UsuarioServiceImp();
-        boolean existeUsuario = uImp.encontrarUsuario(usuario);
-        if (!existeUsuario) {
-            return "index";    
-        } else {}
-        return "medico";
+        int existeUsuario = uImp.encontrarUsuario(usuario);
+       
+        switch (existeUsuario) {
+            case 1:
+                return "administrador";
+                
+            case 2:
+                return "paciente";
+            case 3:
+                return "medico";
+            default:
+                return "userNotFound";
+                
+        }
         
+        
+    }
+
+    @GetMapping("/crearUsuario")
+    public String crearUsuario(){
+
+
+        return "crearUsuario";
     }
 }
