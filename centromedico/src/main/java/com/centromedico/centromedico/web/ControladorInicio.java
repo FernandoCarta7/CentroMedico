@@ -1,7 +1,7 @@
 package com.centromedico.centromedico.web;
 
 import com.centromedico.centromedico.domain.Usuario;
-import com.centromedico.centromedico.servicio.PacienteServiceImp;
+
 import com.centromedico.centromedico.servicio.UsuarioServiceImp;
 
 import lombok.extern.slf4j.Slf4j;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 
 @Controller
@@ -24,7 +25,7 @@ public class ControladorInicio {
         return "index";
     }
 
-    @GetMapping("/iniciarSesion/{usuario}")
+    @PostMapping("/iniciarSesion/{usuario}")
     public String iniciarSesion(@ModelAttribute Usuario usuario){
         
         UsuarioServiceImp uImp = new UsuarioServiceImp();
@@ -51,5 +52,12 @@ public class ControladorInicio {
 
 
         return "crearUsuario";
+    }
+
+
+    @GetMapping("/medico")
+    public String indexMedico(@ModelAttribute Usuario usuario){
+
+        return "medico";
     }
 }
