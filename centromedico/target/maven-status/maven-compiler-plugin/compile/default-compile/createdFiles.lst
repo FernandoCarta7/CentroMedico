@@ -1,4 +1,5 @@
 com/centromedico/centromedico/domain/PagoPaciente.class
+com/centromedico/centromedico/servicio/UsuarioService.class
 com/centromedico/centromedico/servicio/MedicoService.class
 com/centromedico/centromedico/domain/Paciente.class
 com/centromedico/centromedico/servicio/TurnoPacienteService.class
@@ -26,6 +27,9 @@ com/centromedico/centromedico/servicio/HistoriaPacienteService.class
 com/centromedico/centromedico/servicio/EspecialidadServiceImp.class
 com/centromedico/centromedico/servicio/HistoriaPacienteServiceImp.class
 com/centromedico/centromedico/servicio/TurnoService.class
+com/centromedico/centromedico/domain/Usuario.class
+com/centromedico/centromedico/web/SecurityConfig.class
+com/centromedico/centromedico/servicio/UsuarioServiceImp.class
 com/centromedico/centromedico/CentromedicoApplication.class
 com/centromedico/centromedico/domain/Historia.class
 com/centromedico/centromedico/servicio/HistoriaService.class
